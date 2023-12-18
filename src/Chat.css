@@ -1,0 +1,127 @@
+.chat-content {
+    grid-column: 2/span 10;
+    justify-self: stretch;
+    align-self: center;
+
+    display: grid;
+    grid-template-areas: 
+        "welcome welcome"
+        "title1 title2"
+        "content1 content2"
+        "form form";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.welcome {
+    grid-area: welcome;
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    text-align: center;
+    color: rgb(106, 82, 82);
+}
+
+.users-title {
+    grid-area: title1;
+}   
+
+.users {
+    grid-area: content1;
+    list-style-type: "\1F431";
+}
+
+.user {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.messages-title {
+    grid-area: title2;
+}
+
+.messages {
+    grid-area: content2;
+    list-style: none;
+    max-height: 15rem;
+    overflow-y: auto;
+
+    padding: 1rem;
+    padding-bottom: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fac2943d;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#message-form {
+    grid-area: form;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin: 1rem 0;
+}
+
+.chat-content label {
+    grid-column: span 2;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#text {
+    width: 20rem;
+
+    padding: .5rem;
+    margin-left: .5rem;
+    border: 1px solid #a09f9f;
+    border-radius: 8px;
+}
+
+.send {
+    justify-self: end;
+
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+}
+
+.logout {
+    justify-self: start;
+
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+}
+
+@media(prefers-reduced-motion: no-preference) and (max-width: 44rem) {
+    .chat-content {
+        grid-template-areas: 
+            "welcome"
+            "title1"
+            "content1"
+            "title2"
+            "content2"
+            "form";
+        grid-template-columns: 1fr;
+    }
+
+    .users-title, .messages-title {
+        margin: 0;
+    }
+
+    .send, .logout {
+        margin-top: 1rem;
+    }
+}

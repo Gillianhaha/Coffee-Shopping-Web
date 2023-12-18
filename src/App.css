@@ -1,0 +1,19 @@
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  height: 100%;
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  color: blue;
+}
+
+.skip-to-main-content-link:focus {
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,36 @@
+.accordionSection-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 4rem;
+    margin-top: 0rem;
+    border: 1px solid black;
+    border-radius: 15px 15px 0 0;
+    
+    font-size: 1.5rem;
+    color:rgba(95, 39, 39, 0.797);
+
+    cursor: pointer;
+}
+
+.accordionSection-button-open {
+    border-bottom: 0;
+}
+
+.accordionSection-button::after {
+    content:"+";
+}
+
+.accordionSection-button-open::after {
+    content:"-";
+}
+
+
+@media (min-width: 44rem) {
+    .accordionSection-button {
+        margin-top: 2rem;
+    }
+}

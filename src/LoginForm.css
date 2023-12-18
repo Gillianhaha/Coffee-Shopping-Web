@@ -1,0 +1,39 @@
+.login {
+    width: 30rem;
+    max-height: 15rem;
+    margin: 5rem auto;
+
+    color: #000;
+    background-color: rgb(232 197 241 / 66%);
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #000;
+    margin: 1rem 0;
+}
+.login-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.login label {
+    font-size: 1.1rem;
+}
+
+#login-username {
+    width: 12rem;
+    margin-left: 1rem;
+}
+.login-button {
+    padding: 0.3rem 1rem;
+    margin-top: 1rem;
+}

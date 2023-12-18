@@ -1,0 +1,73 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+    align-items: start;
+    justify-items: center;
+    background: linear-gradient(to bottom, #faedcd, #d6dcf7);
+}
+
+.main-dark-mode {
+    background: linear-gradient(to bottom, #e9e2e2, #7c8da3);
+}
+
+.rename-modal {
+    position: fixed;
+    transition: opacity 0.2s ease 0s;
+    opacity: 1;
+    top: 13rem;
+    right: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rename-modal-close {
+    display: none;
+}
+
+.modal-button {
+    background-color: transparent;
+    border: 0;
+
+    cursor: pointer;
+}
+
+/* These css below are from css.gg, the licence is https://www.figma.com/community/file/834587122842084475 licenced under CC BY 4.0*/
+.gg-close-o {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 40px
+}
+   
+.gg-close-o::after,
+.gg-close-o::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: currentColor;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 8px;
+    left: 3px
+}
+   
+.gg-close-o::after {
+    transform: rotate(-45deg)
+} 
+
+@media(min-width: 44rem){
+    .rename-modal {
+        top: 20rem;
+    }
+}

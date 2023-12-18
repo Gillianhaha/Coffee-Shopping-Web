@@ -1,0 +1,216 @@
+.footer {
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+
+    background-color: var(--banner-bg-color);
+}
+
+.footer-dark-mode {
+    background-color: #898179;
+}
+
+.footer-title {
+    margin: 0;
+    margin-left: 0.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    color: #7f4f24;
+} 
+
+.footer-title-dark-mode {
+    color: #e3f7d3;
+}
+
+.footer-place-list,
+.footer-link-list,
+.footer-social-list {
+    display: flex;
+    flex-direction: row;
+
+    padding: 0;
+    margin: 0;
+    margin-left: .5rem;
+
+    list-style: none;
+}
+
+.footer-place-item {
+    padding-right: 2rem;
+    margin-bottom: .5rem;
+}
+
+.footer-place-item,
+.footer-link-item,
+.footer-social-item {
+    padding: 0 1rem;
+    margin-bottom: .5rem;
+    border-right: 1px solid rgb(85, 71, 71);
+}
+
+.footer-place-item:first-child,
+.footer-link-item:first-child,
+.footer-social-item:first-child {
+    padding-left: 0;
+}
+
+.footer-place-item:last-child,
+.footer-link-item:last-child,
+.footer-social-item:last-child {
+    border-right: 0;
+}
+
+.footer a {
+    color: rgb(9, 9, 9); 
+    font-size: .8rem;
+}
+.footer a:hover {
+    color: black;
+}
+
+
+/* These css below are from css.gg, the licence is https://www.figma.com/community/file/834587122842084475 licenced under CC BY 4.0*/
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px
+}
+   
+.gg-instagram::after,
+.gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+}
+   
+.gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px
+}
+   
+.gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px
+} 
+
+.gg-facebook {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 20px
+}
+   
+.gg-facebook::after,
+.gg-facebook::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box
+}
+   
+.gg-facebook::before {
+    width: 8px;
+    height: 20px;
+    border-left: 4px solid;
+    border-top: 4px solid;
+    border-top-left-radius: 5px;
+    left: 6px
+}
+   
+.gg-facebook::after {
+    width: 10px;
+    height: 4px;
+    background: currentColor;
+    top: 7px;
+    left: 4px;
+    transform: skew(-5deg)
+} 
+
+@media(min-width: 44rem){
+    .footer {
+        display: grid;
+        grid-template-areas: 
+        "footer-title footer-title"
+        "footer-place-list footer-place-list"
+        "footer-link-list footer-social-list"
+        ;
+
+        padding: 1rem 2rem;
+    }
+
+    .footer-title {
+        grid-area: footer-title;
+        
+        margin: 0;
+        
+        font-size: 1.5rem;
+        font-weight: 400;
+    } 
+    
+    .footer-place-list,
+    .footer-link-list,
+    .footer-social-list {
+        padding: 0.5rem;
+        padding-bottom: 0;
+        margin: 0;
+    }
+    
+    .footer-place-list {
+        grid-area: footer-place-list;
+    }
+
+    .footer-link-list {
+        grid-area: footer-link-list;
+    }
+    
+    .footer-social-list {
+        grid-area: footer-social-list;
+    
+        margin-left: auto;
+    }
+
+    .footer-place-item {
+        margin-bottom: 0;
+    }
+
+    .footer-social-item,
+    .footer-link-item {
+        padding: 0 1rem;
+        margin-top: .5rem;
+        border-left: 1px solid rgb(85, 71, 71);
+        border-right: 0;
+    }
+    
+    .footer-link-item:first-child,
+    .footer-social-item:first-child {
+        border-left: 0;
+    }
+
+    .footer-social-item:last-child {
+        padding-right: 0;
+    }
+
+    .foot a {
+        font-size: 1rem;
+    }
+}

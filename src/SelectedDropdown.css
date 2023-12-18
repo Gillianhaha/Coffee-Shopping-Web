@@ -1,0 +1,28 @@
+.double-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.double-select label {
+    display: flex;
+    flex-direction: row;
+}
+
+.double-select select {
+    margin-left: 0.5rem;
+}
+
+.double-select .option-select-label {
+    margin-left: 0;
+}
+
+@media(min-width: 44rem){
+    .double-select {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .double-select .option-select-label {
+        margin-left: 1rem;
+    }
+}

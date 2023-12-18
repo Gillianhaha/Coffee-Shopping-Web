@@ -1,0 +1,93 @@
+.location-cards {
+    grid-column: span 12;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    justify-items: center;
+    
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.location-card {
+    grid-column: span 12;
+
+    text-align: left;
+
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px #9a837eba;
+    line-height: 1.4;
+
+    background-color: #eeeeee;
+}
+
+.location-card-pic {
+    width: 125px;
+    height: 125px;
+}
+
+.location-card-content1 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    text-align: right;
+}
+
+.location-card-content2 {
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    text-align: left;
+}
+
+.location-card1 .location-card-pic {
+    float: right;
+    margin: 0.5rem;
+}
+
+.location-card2 .location-card-pic {
+    position: relative;
+    float: left;
+    margin: 0.5rem;
+}
+
+@media(min-width: 44rem) {
+    .location-cards {
+        margin: 1rem;
+    }
+
+    .location-card {
+        display: grid;
+        grid-template-areas: "left right";
+        grid-template-columns: auto 1fr;
+    }
+
+    .location-card2 {
+        margin-top: 1rem;
+        border-top: 1px solid black;
+    }
+
+    .location-card-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .location-card1 .location-card-content {
+        grid-area: left;
+    }
+
+    .location-card1 .location-card-pic {
+        grid-area: right;
+    }
+
+    .location-card2 .location-card-content {
+        grid-area: right;
+    }
+
+    .location-card2 .location-card-pic {
+        grid-area: left;
+    }
+}

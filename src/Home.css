@@ -1,0 +1,89 @@
+.homepage-content {
+    grid-column: span 12;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 40% 60%;
+
+    padding: 0; 
+    line-height: 1.5;
+}
+
+.page-title {
+    display: none;
+}
+
+.carousel {
+    grid-column: span 2;
+
+    padding: 0.5rem;
+}
+
+.main-instruction {
+    grid-column: span 2;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+}
+
+.main-instruction div {
+    grid-column: span 12;
+
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+
+    line-height: 1.3;
+}
+
+.topic1, .topic3 {
+    background-color: #e9edc9;
+}
+
+.topic2 {
+    background-color: #fefae0;
+}
+
+.topic-title {
+    margin: 0.5rem 0;
+
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.main-instruction a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.main-instruction a:hover {
+    color: rgb(78, 78, 172);
+}
+
+@media(min-width: 44rem) {
+    .page-title {
+        display: inherit;
+
+        align-self: center;
+        text-align: center;
+    
+        margin: 0rem;
+        margin-left: 1rem;
+    
+        font-size: 1.5rem;
+        color: rgb(73, 73, 75);
+    }
+
+    .carousel {
+        grid-column: span 1;
+    }
+
+    .main-instruction div {
+        grid-column: 3/11;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}

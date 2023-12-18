@@ -1,0 +1,134 @@
+.header { 
+    position: sticky;
+    top: 0;
+
+    display: grid; 
+    grid-template-areas: 
+        "header-logo header-title header-nav" 
+    ;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    
+    background-color: var(--banner-bg-color);
+    z-index: 1;
+}
+
+.header-dark-mode {
+    background-color: #898179;
+}
+
+.header-logo { 
+    grid-area: header-logo; 
+
+    height: 6rem;
+    border-radius: 0 0 15px 0;
+}
+
+.header-title { 
+    grid-area: header-title; 
+    text-align: center; 
+
+    font-size: 2rem;
+    margin: 0;
+    padding: .5rem;
+
+    color: #7f4f24;
+}
+
+.title-dark-mode {
+    color: #e3f7d3;
+}
+
+.header-nav { 
+    grid-area: header-nav; 
+}
+
+.bg-mode-button {
+    display: none;
+}
+
+/* These css below are from css.gg, the licence is https://www.figma.com/community/file/834587122842084475 licenced under CC BY 4.0*/
+.gg-toggle-on,
+.gg-toggle-on::before {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 20px
+}
+
+.gg-toggle-on {
+    border: 2px solid;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 24px;
+    height: 14px
+}
+
+.gg-toggle-on::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    top: 2px;
+    left: 2px
+} 
+
+.gg-toggle-off,
+.gg-toggle-off::before {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 20px
+}
+
+.gg-toggle-off {
+    border: 2px solid;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 24px;
+    height: 14px
+}
+
+.gg-toggle-off::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    top: 2px;
+    left: 12px
+} 
+
+@media (min-width:44rem) {
+    .header { 
+        grid-template-areas: 
+            "header-logo header-title" 
+            "header-mode header-nav" 
+        ;
+        grid-template-columns: auto 1fr; 
+    }
+    
+    .header-title {  
+        font-size: 3rem;
+    }
+
+    .bg-mode-button {
+        grid-area: header-mode;
+        justify-self: center;
+    
+        display: inline-block;
+    
+        border: 1px solid transparent;
+
+        background-color: transparent;
+    
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        font-size: .9rem;
+    }
+    
+    .mode-button-container {
+        display: flex;
+        flex-direction: row;
+        gap: .3rem;
+    }
+}

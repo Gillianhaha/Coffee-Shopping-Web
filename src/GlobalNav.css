@@ -1,0 +1,109 @@
+.menu-button {
+    height: 2rem;
+    padding-right: 1rem;
+    border: none;
+
+    background-color: var(--banner-bg-color);
+}
+
+.header-nav-dark-mode .menu-button {
+    background-color: #898179;
+}
+
+.global-nav-list { 
+    position: absolute;
+    top: 6rem;
+    right: 0;
+
+    display: none;
+    flex-direction: column; 
+    justify-content: space-around; 
+    align-items: center;
+    
+    padding: 0; 
+    margin: 0; 
+
+    list-style: none; 
+    z-index: 100;
+}
+
+.global-nav-list-open {
+    display: flex;
+    background-color: var(--banner-bg-color);
+}
+
+.header-nav-dark-mode .global-nav-list-open {
+    background-color: #898179;
+}
+
+.global-nav-link { 
+    display: inline-block; 
+
+    padding: 0.5rem 1rem; 
+
+    font-size: 1rem; 
+    text-decoration: none;
+    color: rgb(32, 15, 49);
+}
+
+.global-nav-link:hover { 
+    background-color: var(--banner-selected-bg-color);
+    color: black; 
+}
+
+/* Thses gg-* are from css.gg, the license is: https://www.figma.com/community/file/834587122842084475 licenced under CC BY 4.0 */
+.gg-menu {
+    transform: scale(var(--ggs,1))
+}
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: currentColor
+}
+.gg-menu::after,
+.gg-menu::before {
+    content: "";
+    position: absolute;
+    top: -6px
+}
+.gg-menu::after {
+    top: 6px
+}
+
+@media (min-width:44rem) {
+    .global-nav-list { 
+        position: static;
+
+        display: none;
+        flex-direction: row; 
+        justify-content: space-around; 
+        
+        padding: 0; 
+        margin: 0; 
+    
+        list-style: none; 
+    }
+
+    .global-nav-list-open {
+        display: flex;
+    }
+
+    .global-nav-list {
+        display: flex;
+    }
+
+    .menu-button {
+        display: none;
+    }
+    
+    .global-nav-link { 
+        font-size: 1.3rem; 
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,136 @@
+.register-form {
+    grid-column: span 12;
+    justify-self: start;
+
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+
+    align-items: center;
+    justify-items: first baseline;
+
+    padding: 0;
+    margin: 3rem 0;
+    line-height: 1.2;
+
+    font-size: 1rem;
+}
+
+.form-title {
+    grid-column: span 12;
+    
+    font-size: 1.8rem;
+    color:rgb(106, 82, 82);
+}
+
+.register-form label {
+    grid-column: span 12;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.register-form input {
+    width: 12rem;
+}
+
+.register-form button {
+    grid-column: span 12;
+}
+
+.error { 
+    font-style: italic;
+    color: red;
+}
+
+#preference {
+    font-size: 1rem;
+}
+
+.other-choice {
+    margin-top: 0.5rem;
+}
+
+.register-form #annoy-me-checkbox {
+    display: flex;
+    flex-direction: row;
+}
+
+option {
+    font-size: 1rem;
+}
+
+#annoy-me{
+    width: 2rem;
+    max-height: 1rem;
+}
+
+.welcome-message {
+    grid-column: span 12;
+
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    font-size: 1.5rem;
+    color:rgb(106, 82, 82);
+    background-color: #fefae0;
+    
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@media(prefers-reduced-motion: no-preference) and (min-width: 44rem) {
+    .register-form {
+        grid-column: 2/ span 11;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    .form-title {
+        font-size: 2rem;
+    }
+
+    .register-form label {
+        display:initial; 
+    }
+
+    .register-form label input {
+        margin-left: 0.5rem;
+    }
+
+    #preference {
+        margin-left: 0.5rem;
+    }
+
+    .other-choice {
+        margin-top: 0rem;
+    }
+
+    .error {
+        padding-left: 1rem;
+    }
+
+    #annoy-me {
+        align-self: center;
+        width: 2rem;
+        height: 1rem;
+    }
+
+    .welcome-message {
+        font-size: 2rem;
+    }
+}

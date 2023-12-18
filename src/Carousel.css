@@ -1,0 +1,74 @@
+.carousel {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+  
+.carousel img {
+  max-width: 80%;
+  border-radius: 30px 10px;
+
+  transition: transform 1s ease-in-out;
+}
+
+.carousel button {
+  margin: 0rem;
+
+  background-color: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+/* These css below are from css.gg, the licence is https://www.figma.com/community/file/834587122842084475 licenced under CC BY 4.0*/
+.gg-chevron-right-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 100px
+}
+  
+.gg-chevron-right-o::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(-45deg);
+  left: 5px;
+  top: 6px
+} 
+
+.gg-chevron-left-o {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 100px
+}
+  
+.gg-chevron-left-o::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 7px;
+  top: 6px
+} 
